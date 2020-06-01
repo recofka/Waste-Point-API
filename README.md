@@ -1,0 +1,1 @@
+This is a RESTful API project that will be the backend for finding waste collection points and checking the situation of the collection containers.
