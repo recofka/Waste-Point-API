@@ -2,6 +2,23 @@ import { Request, Response } from 'express';
 import knex from '../dataBase/connection';
 
 class PointsController {
+    async index(request: Request, response: Response) {
+        const { city, items } = request.query;
+        
+        const parsedItems = String(items)
+            .split(',')
+            .map(item => Number(item.trim()))
+        
+        const points = await knex('points')
+            .join('point_items', 'points.id', '=', 'point_items.point_id')
+            .whereIn('point_items.item_id', parsedItems)
+            .where('city', String(city))
+            .distinct()
+            .select('points.*');
+
+        return response.json(points)
+    }
+
     async show(request: Request, response: Response) {
         const { id } = request.params;
 
@@ -30,7 +47,7 @@ class PointsController {
 
         const trx = await knex.transaction();
         const point = {
-            image: 'image-fake',
+            image: 'https://previews.123rf.com/images/kazantseva/kazantseva1907/kazantseva190700038/127469791-amsterdam-netherlands-may-03-2019-three-garbage-containers-for-segregation-on-the-street-.jpg',
             name,
             email,
             latitude,
