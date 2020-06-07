@@ -30,7 +30,7 @@ routes.post(
             latitude: Joi.number().required(),
             longitude: Joi.number().required(),
             items: Joi.string().required(),
-            city: Joi.string().required(),
+            neighborhood: Joi.string().required(),
         })
     }, {
         abortEarly: false

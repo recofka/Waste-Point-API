@@ -3,7 +3,7 @@ import knex from '../dataBase/connection';
 
 class PointsController {
     async index(request: Request, response: Response) {
-        const { city, items } = request.query;
+        const { neighborhood, items } = request.query;
 
         const parsedItems = String(items)
             .split(',')
@@ -12,7 +12,7 @@ class PointsController {
         const points = await knex('points')
             .join('point_items', 'points.id', '=', 'point_items.point_id')
             .whereIn('point_items.item_id', parsedItems)
-            .where('city', String(city))
+            .where('neighborhood', String(neighborhood))
             .distinct()
             .select('points.*');
 
@@ -53,7 +53,7 @@ async create(request: Request, response: Response) {
         email,
         latitude,
         longitude,
-        city,
+        neighborhood,
         items
     } = request.body;
 
@@ -64,7 +64,7 @@ async create(request: Request, response: Response) {
         email,
         latitude,
         longitude,
-        city
+        neighborhood
     }
     const insertedIds = await trx('points').insert(point);
 
