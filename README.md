@@ -17,12 +17,12 @@
 </p>
 
 <p align="center">
-  <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#-project">Project Backend</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#-frontend">Frontend</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#project">Project Backend</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#frontend">Frontend</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
   <!-- <a href="#-goals">Goals</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp; -->
   <!-- <a href="#-features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp; -->
-  <a href="#-installation">Installation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#installation">Installation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
 </p>
 
 <br>
